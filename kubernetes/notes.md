@@ -7,8 +7,6 @@ runs the cluster inside it, named `rancher-desktop`
 puts the configuration in $HOME/.kube/cofig
 had to manually install kubectl (cli to interact with the cluster) and k9s (a cool terminal utility to check the cluster)
 
-alias k='kubectl' for ease of use
-
 what is Kubernetes? - operating system of the cloud, handles running large compute of multiple virtual machines mostly by itself
 
 kubernetes manages clusters (everything we deploy will be within a cluster)
@@ -36,4 +34,18 @@ so they can communicate via localhost, or we can put them in separate pods and t
 communicate using the network labels (not completely sure how this works and where its resoluted)
 
 the standard is to run one container per pod
+
+**kubectl**
+
+alias k='kubectl' for ease of use
+
+k get pods - shows all running pods
+k get pods -A - shows all running pods across all namespaces
+
+what is a namespace? (something to group pods into) (one team owns 5 containers they could all be in one namespace)
+
+k config get-context - shows the current context we are in
+(note completely sure) - but looks like contexts are the higher most domain in kubernetes
+there could be multiple contexts that we can switch into
+a context could has multiple clusters in it
 
