@@ -1,3 +1,5 @@
+# Learning kubernetes
+
 Bought: Udemy - From zero to a full Kubernetes environment including apps and monitoring
 
 local setup:
@@ -37,15 +39,30 @@ the standard is to run one container per pod
 
 **kubectl**
 
-alias k='kubectl' for ease of use
+for ease of use
+```bash
+alias k='kubectl'
+```
 
+```bash
 k get pods - shows all running pods
+```
+```bash
 k get pods -A - shows all running pods across all namespaces
+```
 
 what is a namespace? (something to group pods into) (one team owns 5 containers they could all be in one namespace)
 
-k config get-context - shows the current context we are in
+```bash
+k config get-context
+``` 
+shows the current context we are in
 (note completely sure) - but looks like contexts are the higher most domain in kubernetes
 there could be multiple contexts that we can switch into
 a context could has multiple clusters in it
+
+to run an image in the cluster via cli:
+```bash
+k run nginx --image=nginx
+```
 
